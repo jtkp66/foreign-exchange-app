@@ -6,13 +6,15 @@ import SurveyEdit from "./surveys/SurveyEdit";
 import SurveyDelete from "./surveys/SurveyDelete";
 import SurveyList from "./surveys/SurveyList";
 import SurveyShow from "./surveys/SurveyShow";
+import Header from "./Header";
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="ui container">
         <BrowserRouter>
           <div>
+            <Header />
             <Route path="/" exact component={SurveyList} />
             <Route path="/surveys/new" exact component={SurveyCreate} />
             <Route path="/surveys/edit" exact component={SurveyEdit} />
